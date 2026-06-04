@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #e4e4e7;
+  --sidebar: #121218;
+  --card: #18181b;
+  --border: #27272a;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar: var(--sidebar);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.react-flow__node {
+  font-size: 12px;
+}
+
+.input {
+  @apply w-full bg-zinc-900 border border-zinc-700 rounded px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-accent transition-colors;
+}
+
+textarea.input {
+  @apply resize-y;
+}
+
+select.input {
+  @apply appearance-none;
+}
